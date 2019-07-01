@@ -2,9 +2,44 @@ module.exports = {
   title: "CourtIQ Explainer",
   description: "Just playing around",
   head: [
-    ["link", { rel: "icon", href: `/logo.png` }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: `/icons/favicon-32x32.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: `/icons/android-icon-192x192.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "96x96",
+        href: `/icons/favicon-96x96.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: `/icons/favicon-16x16.png`,
+      },
+    ],
     ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
+    ["meta", { name: "theme-color", content: "#000000" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
       "meta",
@@ -26,7 +61,7 @@ module.exports = {
       "meta",
       {
         name: "msapplication-TileImage",
-        content: "/icons/msapplication-icon-144x144.png",
+        content: "/icons/ms-icon-144x144.png",
       },
     ],
     ["meta", { name: "msapplication-TileColor", content: "#000000" }],
@@ -53,4 +88,11 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    "@vuepress/back-to-top",
+    "@vuepress/google-analytics",
+    {
+      ga: "UA-130757514-1", // UA-00000000-0
+    },
+  ],
 };

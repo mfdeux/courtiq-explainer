@@ -21,5 +21,9 @@
   "homepage": "https://github.com/tomcam/vpdemo1#readme",
   "dependencies": {
     "vuepress": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1"
   }
 }
