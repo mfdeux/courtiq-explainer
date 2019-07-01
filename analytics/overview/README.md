@@ -1,3 +1,0 @@
-# Analytics Overview
-
-## True Shooting

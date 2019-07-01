@@ -36,10 +36,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/" },
-      { text: "Intro", link: "/intro/" },
       { text: "Analytics", link: "/analytics/" },
-      { text: "External", link: "https://google.com" },
+      { text: "CBA", link: "/cba/intro/" },
     ],
     sidebar: "auto",
     themeConfig: {

@@ -1,19 +1,27 @@
 # Analytics
 
-## True Shooting Pct (TS)
+## True Shooting Pct (TS%)
 
 True shooting percentage is a measure of shooting efficiency that takes into account field goals, 3-point field goals, and free throws.
 
 :::tip TS% Formula
-PTS / (2 \* FGA + 0.44 \* FTA)
+= Points / (2 \* FieldGoalsAttempted + 0.44 \* FreeThrowsAttempted)
 :::
 
-## Effective Field Goal Pct (EFG)
+:::warning Try It Out
+<TrueShooting/>
+:::
 
-Effective field goal percentage adjusts for the fact that a 3-point field goal is worth one more point than a 2-point field goal. For example, suppose Player A goes 4 for 10 with 2 threes, while Player B goes 5 for 10 with 0 threes. Each player would have 10 points from field goals, and thus would have the same effective field goal percentage (50%).
+## Effective Field Goal Pct (EFG%)
+
+Effective field goal percentage adjusts field goal percentage for the fact that a 3-point field goal is worth one more point than a 2-point field goal. For example, suppose Player A goes 4 for 10 with 2 threes, while Player B goes 5 for 10 with 0 threes. Each player would have 10 points from field goals, and thus would have the same effective field goal percentage (50%).
 
 :::tip EFG% Formula
-(FG + 0.5 \* 3P) / FGA
+= (FieldGoalsMade + 0.5 \* 3PointersMade) / FieldGoalsAttempted
+:::
+
+:::warning Try It Out
+<EffectiveFieldGoal/>
 :::
 
 ## Possessions
@@ -24,6 +32,10 @@ Estimates possessions based on both the team's statistics and their opponent's s
 0.5 _ ((Tm FGA + 0.4 _ Tm FTA - 1.07 _ (Tm ORB / (Tm ORB + Opp DRB)) _ (Tm FGA - Tm FG) + Tm TOV) + (Opp FGA + 0.4 _ Opp FTA - 1.07 _ (Opp ORB / (Opp ORB + Tm DRB)) \* (Opp FGA - Opp FG) + Opp TOV))
 :::
 
+:::warning Try It Out
+<Possessions/>
+:::
+
 ## Value Over Replacement Player (VORP)
 
 Value Over Replacement Player (available since the 1973-74 season in the NBA); a box score estimate of the points per 100 TEAM possessions that a player contributed above a replacement-level (-2.0) player, translated to an average team and prorated to an 82-game season. Multiply by 2.70 to convert to wins over replacement.
@@ -32,9 +44,17 @@ Value Over Replacement Player (available since the 1973-74 season in the NBA); a
 
 Assist percentage is an estimate of the percentage of teammate field goals a player assisted while he was on the floor.
 
+:::warning Try It Out
+<AssistPct/>
+:::
+
 ## Block Percentage (BLK%)
 
 Block percentage is an estimate of the percentage of opponent two-point field goal attempts blocked by the player while he was on the floor.
+
+:::warning Try It Out
+<BlockPct/>
+:::
 
 ## Box Plus/Minus (BPM)
 
@@ -74,6 +94,8 @@ the formula is . Game Score was created by John Hollinger to give a rough measur
 PTS + 0.4 _ FG - 0.7 _ FGA - 0.4*(FTA - FT) + 0.7 * ORB + 0.3 _ DRB + STL + 0.7 _ AST + 0.7 _ BLK - 0.4 _ PF - TOV
 :::
 
+<GameScore/>
+
 ## Four Factors
 
 Dean Oliver's "Four Factors of Basketball Success"; please see the article Four Factors for more information.
@@ -96,6 +118,8 @@ Usage percentage is an estimate of the percentage of team plays used by a player
 100 _ ((FGA + 0.44 _ FTA + TOV) _ (Tm MP / 5)) / (MP _ (Tm FGA + 0.44 \* Tm FTA + Tm TOV))
 :::
 
+<Usage/>
+
 ## Total Rebound Pct (TRB%)
 
 Total rebound percentage is an estimate of the percentage of available rebounds a player grabbed while he was on the floor.
@@ -103,6 +127,8 @@ Total rebound percentage is an estimate of the percentage of available rebounds 
 :::tip TRB% Formula
 100 _ (TRB _ (Tm MP / 5)) / (MP \* (Tm TRB + Opp TRB))
 :::
+
+<TotalRebPct/>
 
 ## Turnover Percentage (TOV%)
 
@@ -112,6 +138,8 @@ Turnover percentage is an estimate of turnovers per 100 plays.
 100 \* Turnovers / (FGA + 0.44 \* FTA + TOV)
 :::
 
+<TurnoverPct/>
+
 ## Steal Percentage (STL%)
 
 Steal Percentage is an estimate of the percentage of opponent possessions that end with a steal by the player while he was on the floor.
@@ -119,6 +147,8 @@ Steal Percentage is an estimate of the percentage of opponent possessions that e
 :::tip TOV% Formula
 100 _ (STL _ (Tm MP / 5)) / (MP \* Opp Poss)
 :::
+
+<StealPct/>
 
 ## Player Efficiency Rating (PER)
 
@@ -132,6 +162,8 @@ Pace is the number of possessions per 48 minutes by a team.
 48 _ ((Tm Poss + Opp Poss) / (2 _ (Tm MP / 5)))
 :::
 
+<Pace/>
+
 ## Offensive Rebound Percentage (ORB%)
 
 Offensive rebound percentage is an estimate of the percentage of available offensive rebounds a player grabbed while he was on the floor.
@@ -139,6 +171,8 @@ Offensive rebound percentage is an estimate of the percentage of available offen
 :::tip Formula
 100 _ (ORB _ (Tm MP / 5)) / (MP \* (Tm ORB + Opp DRB))
 :::
+
+<OffensiveRebPct/>
 
 ## Points Per Possession (PPP)
 
@@ -148,6 +182,8 @@ Hello
 TotalPoints / Possessions
 :::
 
+<PPP/>
+
 ## Points Per Shot Attempt (PSA)
 
 Hello
@@ -155,6 +191,8 @@ Hello
 :::tip TPR% Formula
 TotalPoints / ShotAttempts
 :::
+
+<PSA/>
 
 ## 3 Point Rate
 
@@ -164,6 +202,8 @@ Percentage of field goal attempts from 3 point range
 ThreePointAttempts / FieldGoalAttempts
 :::
 
+<ThreePtRate/>
+
 ## 2 Point Rate
 
 Percentage of field goal attempts from 2 point range
@@ -171,6 +211,8 @@ Percentage of field goal attempts from 2 point range
 :::tip TPR% Formula
 TwoPointAttempts / FieldGoalAttempts
 :::
+
+<TwoPtRate/>
 
 ## Free Throw (FT) Rate
 
@@ -180,6 +222,8 @@ Percentage of free throw attempts to field goal attempts
 FreeThrowAttempts / FieldGoalAttempts
 :::
 
+<FTRate/>
+
 ## Plus/Minus Rating
 
 the difference between their team's total scoring versus their opponent's when the player is in the game.
@@ -187,3 +231,5 @@ the difference between their team's total scoring versus their opponent's when t
 :::tip Hello
 the difference between their team's total scoring versus their opponent's when the player is in the game.
 :::
+
+<PlusMinus/>
