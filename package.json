@@ -1,0 +1,25 @@
+{
+  "name": "courtiq-explainer",
+  "version": "0.1.0",
+  "description": "Analytics and CBA explainer for the NBA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vuepress build",
+    "dev": "vuepress dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomcam/vpdemo1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomcam/vpdemo1/issues"
+  },
+  "homepage": "https://github.com/tomcam/vpdemo1#readme",
+  "dependencies": {
+    "vuepress": "^1.0.2"
+  }
+}
