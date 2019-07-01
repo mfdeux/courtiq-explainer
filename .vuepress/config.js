@@ -32,7 +32,7 @@ module.exports = {
     ["meta", { name: "msapplication-TileColor", content: "#000000" }],
   ],
   serviceWorker: true,
-  ga: "UA-109510157-1",
+  ga: "UA-130757514-1",
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
