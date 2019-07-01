@@ -38,6 +38,7 @@ module.exports = {
       { text: "Home", link: "/" },
       { text: "Analytics", link: "/analytics/" },
       { text: "CBA", link: "/cba/intro/" },
+      { text: "Feedback", link: "/feedback/" },
     ],
     sidebar: "auto",
     themeConfig: {
